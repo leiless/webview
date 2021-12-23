@@ -499,6 +499,9 @@ public:
       webkit_settings_set_enable_developer_extras(settings, true);
     }
 
+    gtk_window_set_keep_above(GTK_WINDOW(m_window), true);
+    gtk_window_set_type_hint(GTK_WINDOW(m_window), GDK_WINDOW_TYPE_HINT_DIALOG);
+    gtk_window_set_position(GTK_WINDOW(m_window), GTK_WIN_POS_MOUSE);
     gtk_widget_show_all(m_window);
   }
   void *window() { return (void *)m_window; }
